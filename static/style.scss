@@ -14,6 +14,7 @@ header {
     background-color: white;
     top: 0;
     position: fixed;
+    z-index: 999;
 
     .d-block{
         margin-left: 1rem;
@@ -59,4 +60,40 @@ nav {
         font-size: 0.875rem;
         font-weight: bold;
     }
+}
+
+.features {
+    margin-top: 3.5rem;
+    h1{
+        font-weight: 700;
+        font-size: calc(1.475rem + 2.7vw);
+        padding-top: 4rem;
+        padding-left: 1rem;
+    }
+    .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .card {
+        width: 25rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    #card-relative {
+        position: relative;
+        padding-top: 7rem;
+    }
+
+    #card-absolute {
+        width: 30rem !important;
+        position: absolute;
+        top: 17rem;
+        right: 21rem;
+    }
+    
 }

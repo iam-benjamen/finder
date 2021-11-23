@@ -13,6 +13,7 @@ header {
   background-color: white;
   top: 0;
   position: fixed;
+  z-index: 999;
 }
 
 header .d-block {
@@ -58,4 +59,41 @@ nav .finder-btn {
   border-radius: 1rem;
   font-size: 0.875rem;
   font-weight: bold;
+}
+
+.features {
+  margin-top: 3.5rem;
+}
+
+.features h1 {
+  font-weight: 700;
+  font-size: calc(1.475rem + 2.7vw);
+  padding-top: 4rem;
+  padding-left: 1rem;
+}
+
+.features .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.features .card {
+  width: 25rem;
+}
+
+.features .card img {
+  width: 100%;
+}
+
+.features #card-relative {
+  position: relative;
+  padding-top: 7rem;
+}
+
+.features #card-absolute {
+  width: 31rem !important;
+  position: absolute;
+  top: 17rem;
+  right: 21rem;
 }
