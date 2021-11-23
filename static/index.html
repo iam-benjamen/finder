@@ -14,8 +14,8 @@
     </head>
     <body>
         <header>
-            <img class="d-block" src="https://finder.createx.studio/img/logo/logo-dark.svg" width="116" alt="Finder">
             <nav>
+                <img class="d-block" src="https://finder.createx.studio/img/logo/logo-dark.svg" width="116" alt="Finder">
                 <ul>
                     <li>
                         <a href="#">Demos</a>
@@ -34,10 +34,9 @@
         </header>
         <main>
             <section class="features">
-               
 
                 <div class="top">
-                    <div>
+                    <div class="title">
                         <h1>
                             Find your ideal
                         </h1>
@@ -58,17 +57,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="card">
+                <div class="card" id="car">
                     <div>
                         <img src="https://finder.createx.studio/img/intro/demos/car-finder.png" alt="car-finder">
                     </div>
                     <h2><i class="fa fa-car-side"></i> Car</h2>
                 </div>
             
-                <div class="card">
+                <div class="card" id="city">
                     <h2><i class="fa fa-map-marker-alt"></i> City place</h2>
                     <div>
                         <img src="https://finder.createx.studio/img/intro/demos/city-guide.png" alt="city-guide">
@@ -77,13 +75,14 @@
 
             </section>
 
-            <section>
-                <div>
-                    <h2>Finder feature</h2>
+            <section class="feature-list">
+
+                <div class="ads-intro">
+                    <h2>Finder feature highlights</h2>
                     <img src="https://finder.createx.studio/img/intro/turn-right-arrow.svg" alt="turn-right-arrow">
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/bootstrap.png" alt="bootstrap">
                     <h3>Built with Bootstrap 5</h3>
                     <p>
@@ -92,7 +91,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/gulp.png" alt="gulp">
                     <h3>Kick-start your development</h3>
                     <p>
@@ -102,7 +101,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/sass.png" alt="sass">
                     <h3>Easy to customize with Sass</h3>
                     <p>
@@ -112,7 +111,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/pug.png" alt="pug">
                     <h3>Pug - HTML templating</h3>
                     <p>
@@ -122,7 +121,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/components.png" alt="flexible">
                     <h3>50+ flexible components</h3>
                     <p>
@@ -132,7 +131,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/mobile.png" alt="mobile">
                     <h3>Mobile friendly interface</h3>
                     <p>
@@ -141,7 +140,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/touch.png" alt="Touch-enabled">
                     <h3>Touch-enabled sliders</h3>
                     <p>
@@ -151,7 +150,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/google-fonts.png" alt="google-fonts">
                     <h3>Google fonts</h3>
                     <p>
@@ -160,7 +159,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/vector.png" alt="Vector">
                     <h3>Vector based HD ready icons</h3>
                     <p>
@@ -170,7 +169,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/html.png" alt="html">
                     <h3>W3C valid HTML code</h3>
                     <p>
@@ -180,7 +179,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/js.png" alt="JavaScript">
                     <h3>Future-proof JavaScript</h3>
                     <p>
@@ -189,7 +188,7 @@
                     </p>
                 </div>
 
-                <div>
+                <div class="ads">
                     <img src="https://finder.createx.studio/img/intro/features/docs.png" alt="Documentation">
                     <h3>Detailed documentation</h3>
                     <p>
@@ -199,33 +198,40 @@
                     </p>
                 </div>
             </section>
-            <div>
-                <h3>
-                    Still not convinced?
-                </h3>
-                <h2>
-                    Add premium support and lifetime updates to this!
-                </h2>
-                <a href="#">
-                    Buy Finder
-                </a>
-            </div>
+            
         </main>
         <footer>
-            <div>
+            <div class="overlay">
+                <div class="content">
+                    <h3>
+                        Still not convinced?
+                    </h3>
+                    <h2>
+                        Add premium support and lifetime updates to this!
+                    </h2>
+                    <a href="#">
+                        <i class="fa fa-shopping-cart"></i>  Buy Finder
+                    </a>
+                </div>
+                
+            </div>
+            <div class="footer-div">
                 <h2>
                     Subscribe to our newsletter
                 </h2>
-                <p>
+                
+                <span class="form">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Your email">
+                    <a href="#">Subscribe*</a>
+                </span>
+
+                <p id="first-paragraph">
                     *Subscribe to our newsletter to receive early discount offers, 
                     updates and new products info.
                 </p>
-                <div>
-                    <i class="fi-mail"></i>
-                    <input type="email" placeholder="Your email">
-                    <a href="#">Subscribe*</a>
-                </div>
-                <p>
+
+                <p id="second-paragraph">
                     © All rights reserved. <a href="#">by Createx Studio</a> 
                 </p>
             </div>

@@ -1,9 +1,18 @@
 html {
   font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+footer .overlay a, footer .footer-div .form a, nav .finder-btn {
+  border: 0px solid;
+  background-color: #fd5631;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 header {
@@ -50,15 +59,10 @@ nav li a {
 }
 
 nav .finder-btn {
-  text-decoration: none;
   margin-right: 1rem;
-  border: 0px solid;
-  background-color: #fd5631;
-  color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 1rem;
   font-size: 0.875rem;
-  font-weight: bold;
 }
 
 .features {
@@ -68,8 +72,9 @@ nav .finder-btn {
 .features h1 {
   font-weight: 700;
   font-size: calc(1.475rem + 2.7vw);
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-left: 1rem;
+  color: #1f1b2d;
 }
 
 .features .top {
@@ -78,22 +83,181 @@ nav .finder-btn {
   justify-content: space-between;
 }
 
-.features .card {
-  width: 25rem;
+.features .top .title img {
+  padding-left: 1rem;
 }
 
 .features .card img {
   width: 100%;
 }
 
+.features .card i {
+  color: orangered !important;
+}
+
+.features .card h2 {
+  color: #454056;
+}
+
 .features #card-relative {
   position: relative;
   padding-top: 7rem;
+  width: 45%;
 }
 
 .features #card-absolute {
-  width: 31rem !important;
+  width: 110%;
   position: absolute;
-  top: 17rem;
-  right: 21rem;
+  top: 15rem;
+  right: 77%;
+}
+
+.features #car {
+  float: right;
+  width: 55% !important;
+  padding-top: 1rem;
+}
+
+.features #city {
+  padding-left: 2rem;
+  padding-top: 7rem;
+  width: 40%;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: 21% auto auto auto;
+  grid-gap: 3rem 2rem;
+  padding-top: 5rem;
+  width: 100%;
+}
+
+.feature-list .ads {
+  display: flex;
+  flex-direction: column;
+  width: 13rem;
+}
+
+.feature-list .ads h3 {
+  color: #1F1B2D;
+}
+
+.feature-list .ads p {
+  color: #666276;
+  font-size: 14px;
+}
+
+.feature-list .ads img {
+  width: 3rem;
+}
+
+.feature-list .ads-intro {
+  grid-row: 1/5;
+}
+
+.feature-list .ads-intro h2 {
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.feature-list .ads-intro img {
+  padding-left: 1rem;
+  padding-top: 2rem;
+}
+
+footer {
+  height: 100vh;
+  width: 100%;
+  background-color: #1F1B2D;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-top: 20rem;
+}
+
+footer .footer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 35vh;
+  align-items: center;
+}
+
+footer .footer-div h2 {
+  font-size: 2rem;
+}
+
+footer .footer-div .form {
+  border: 1px solid;
+  border-radius: 2.5rem;
+  padding: 0.5rem;
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+footer .footer-div .form input {
+  padding: .5rem 3rem;
+  background-color: transparent;
+  border: none;
+}
+
+footer .footer-div .form i {
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 1.375rem;
+  padding-left: 1rem;
+}
+
+footer .footer-div .form a {
+  padding: 0.5rem 2rem;
+  border-radius: 3rem;
+}
+
+footer .footer-div #first-paragraph {
+  font-size: 0.75rem;
+  opacity: .7;
+  width: 47%;
+}
+
+footer .footer-div #second-paragraph a {
+  color: #fd5631;
+  text-decoration: underline;
+}
+
+footer .overlay {
+  position: absolute;
+  background-color: #f5f4f8;
+  width: 98%;
+  margin-left: 1%;
+  height: 60%;
+  bottom: 29rem;
+  border-radius: 1rem;
+  line-height: 2.5rem;
+}
+
+footer .overlay h3 {
+  color: #1F1B2D;
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+footer .overlay h2 {
+  color: #1F1B2D;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+footer .overlay a {
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  margin-top: 1rem;
+}
+
+footer .overlay .content {
+  padding-top: 7%;
 }
