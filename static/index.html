@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/ac881f5f39.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
-        <script src="script\finder.js"></script>
+        <script src="finder.js"></script>
         <title>finder.createx.studio</title>
     </head>
     <body>
@@ -17,8 +17,18 @@
             <nav>
                 <img class="d-block" src="https://finder.createx.studio/img/logo/logo-dark.svg" width="116" alt="Finder">
                 <ul>
-                    <li>
-                        <a href="#">Demos</a>
+                    <li class="with-drop">
+                        <a class="demos" href="#">Demos <i class="fa fa-chevron-down"></i></a>
+
+                        <div class="dropdown-content">
+                            <a href="#">Real Estate Demo</a>
+                            <hr>
+                            <a href="#">Car Finder Demo</a>
+                            <hr>
+                            <a href="#">Job Board Demo</a>
+                            <hr>
+                            <a href="#">City Guide Demo</a>
+                        </div>
                     </li>
 
                     <li>
@@ -34,7 +44,6 @@
         </header>
         <main>
             <section class="features">
-
                 <div class="top">
                     <div class="title">
                         <h1>
@@ -45,10 +54,13 @@
                     
                     
                     <div class="card" id="card-relative">
-                        <h2><i class="fa fa-briefcase"></i> Job</h2>
-                        <div>
-                            <img src="https://finder.createx.studio/img/intro/demos/job-board.png" alt="Job Board Demo">
+                        <div id="job-available">
+                            <h2><i class="fa fa-briefcase"></i> Job</h2>
+                            <div>
+                                <img src="https://finder.createx.studio/img/intro/demos/job-board.png" alt="Job Board Demo">
+                            </div>
                         </div>
+
 
                         <div class="card" id="card-absolute">
                             <h2><i class="fa fa-building"></i> Property</h2>

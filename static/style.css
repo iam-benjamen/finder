@@ -3,6 +3,11 @@ html {
   box-sizing: border-box;
 }
 
+html:not([data-scroll='0']) header {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.125rem -0.125rem rgba(31, 27, 45, 0.08), 0 0.25rem 0.75rem rgba(31, 27, 45, 0.08);
+}
+
 body {
   margin: 0;
 }
@@ -13,16 +18,23 @@ footer .overlay a, footer .footer-div .form a, nav .finder-btn {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  transition: color .2s ease-in-out,background-color  .2s ease-in-out,border-color  .2s ease-in-out,box-shadow .2s ease-in-out;
+}
+
+footer .overlay a:hover, footer .footer-div .form a:hover, nav .finder-btn:hover {
+  background-color: #fd390e;
+  box-shadow: 0 0.25rem 0.25rem 0.125rem rgba(253, 86, 49, 0.1), 0 0.375rem 0.75rem -0.125rem rgba(253, 86, 49, 0.4);
 }
 
 header {
   width: 100%;
-  height: 3.5rem;
+  height: 4.5rem;
   display: flex;
-  background-color: white;
+  background-color: #f5f4f8;
   top: 0;
   position: fixed;
   z-index: 999;
+  transition: background-color .1s ease-in-out,box-shadow .1s ease-in-out;
 }
 
 header .d-block {
@@ -45,12 +57,41 @@ nav ul {
   margin-bottom: 0;
   margin-top: 0;
   gap: 2rem;
+  margin-right: auto;
 }
 
 nav li {
   text-decoration: none;
   font-size: .875rem;
   font-weight: bold;
+  position: relative;
+}
+
+nav li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.125rem -0.125rem rgba(31, 27, 45, 0.08), 0 0.25rem 0.75rem rgba(31, 27, 45, 0.08);
+  z-index: 1;
+  width: 12rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #efecf3;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  color: #666276;
+}
+
+nav li .dropdown-content a {
+  padding: 6px 16px;
+  text-decoration: none;
+  display: block;
+  transition: color .2s ease-in-out;
+}
+
+nav li .dropdown-content hr {
+  width: 90%;
+  color: rgba(205, 204, 209, 0.01);
 }
 
 nav li a {
@@ -58,15 +99,33 @@ nav li a {
   color: #454056;
 }
 
+nav li a i {
+  font-size: .7rem;
+  font-weight: normal;
+}
+
 nav .finder-btn {
   margin-right: 1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
   font-size: 0.875rem;
+}
+
+.dropdown-content a:hover {
+  color: orangered;
+}
+
+.with-drop:hover .dropdown-content {
+  display: block;
+}
+
+.with-drop:hover .demos {
+  color: orangered;
 }
 
 .features {
   margin-top: 3.5rem;
+  background-color: #f5f4f8;
 }
 
 .features h1 {
@@ -87,8 +146,14 @@ nav .finder-btn {
   padding-left: 1rem;
 }
 
+.features .card {
+  cursor: pointer;
+}
+
 .features .card img {
   width: 100%;
+  transition: transform .3s ease-in-out;
+  will-change: transform;
 }
 
 .features .card i {
@@ -97,6 +162,15 @@ nav .finder-btn {
 
 .features .card h2 {
   color: #454056;
+  transition: color .25s ease-in-out,background-color  .25s ease-in-out,box-shadow  .25s ease-in-out,border-color .25s ease-in-out;
+}
+
+.features .card #job-available:hover h2 {
+  color: orangered;
+}
+
+.features .card #job-available:hover img {
+  transform: scale(1.02, 1.02);
 }
 
 .features #card-relative {
@@ -110,12 +184,29 @@ nav .finder-btn {
   position: absolute;
   top: 15rem;
   right: 77%;
+  z-index: 10;
+}
+
+.features #card-absolute:hover h2 {
+  color: orangered;
+}
+
+.features #card-absolute:hover img {
+  transform: scale(1.02, 1.02);
 }
 
 .features #car {
   float: right;
-  width: 55% !important;
+  width: 50% !important;
   padding-top: 1rem;
+}
+
+.features #car:hover h2 {
+  color: orangered;
+}
+
+.features #car:hover img {
+  transform: scale(1.02, 1.02);
 }
 
 .features #city {
@@ -124,10 +215,18 @@ nav .finder-btn {
   width: 40%;
 }
 
+.features #city:hover h2 {
+  color: orangered;
+}
+
+.features #city:hover img {
+  transform: scale(1.02, 1.02);
+}
+
 .feature-list {
   display: grid;
   grid-template-columns: 21% auto auto auto;
-  grid-gap: 3rem 2rem;
+  grid-gap: 0.4rem 0.5rem;
   padding-top: 5rem;
   width: 100%;
 }
@@ -135,7 +234,10 @@ nav .finder-btn {
 .feature-list .ads {
   display: flex;
   flex-direction: column;
-  width: 13rem;
+  width: auto;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: border-color .2s ease-in-out,background-color  .2s ease-in-out,box-shadow .2s ease-in-out;
 }
 
 .feature-list .ads h3 {
@@ -149,6 +251,10 @@ nav .finder-btn {
 
 .feature-list .ads img {
   width: 3rem;
+}
+
+.feature-list .ads:hover {
+  box-shadow: 0 0.125rem 0.125rem -0.125rem rgba(31, 27, 45, 0.08), 0 0.25rem 0.75rem rgba(31, 27, 45, 0.08);
 }
 
 .feature-list .ads-intro {
@@ -200,14 +306,25 @@ footer .footer-div .form {
 }
 
 footer .footer-div .form input {
-  padding: .5rem 3rem;
-  background-color: transparent;
+  padding: 0;
+  outline-style: none;
   border: none;
+  background-color: transparent;
+  padding-left: 1rem;
+  color: white;
+  width: 60%;
+  height: 2rem;
+}
+
+footer .footer-div .form input::placeholder {
+  font-size: 1rem;
+  color: #666276;
+  padding-top: 5px;
 }
 
 footer .footer-div .form i {
-  color: rgba(255, 255, 255, 0.15);
-  font-size: 1.375rem;
+  color: #666276;
+  font-size: 1rem;
   padding-left: 1rem;
 }
 
@@ -220,6 +337,10 @@ footer .footer-div #first-paragraph {
   font-size: 0.75rem;
   opacity: .7;
   width: 47%;
+}
+
+footer .footer-div #second-paragraph {
+  margin: 3rem;
 }
 
 footer .footer-div #second-paragraph a {
@@ -259,5 +380,65 @@ footer .overlay a {
 }
 
 footer .overlay .content {
-  padding-top: 7%;
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 800px) {
+  .feature-list .ads-intro {
+    display: none;
+  }
+  .feature-list {
+    grid-template-columns: auto auto auto;
+  }
+  footer .overlay {
+    height: 45%;
+    bottom: 35rem;
+  }
+  footer .overlay h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .features h1 {
+    text-align: center;
+  }
+  .feature-list {
+    grid-template-columns: auto auto;
+  }
+  .features .top .title img {
+    display: none;
+  }
+  .features #city {
+    width: 100%;
+    padding: 0;
+  }
+  .features #car {
+    width: 100% !important;
+    padding-top: 45rem;
+    padding-left: 10px;
+  }
+  .features #card-relative {
+    position: absolute;
+    width: 100%;
+  }
+  .features .card h2 {
+    text-align: center;
+  }
+  .features #card-absolute {
+    top: auto;
+    width: 100%;
+    right: auto;
+  }
 }
